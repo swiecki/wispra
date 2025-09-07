@@ -1,0 +1,10 @@
+[Unit]
+Description=Wispra Push-to-Talk Daemon (Zig)
+
+[Service]
+ExecStart=%h/.local/bin/wisprad --debug
+Environment="LD_LIBRARY_PATH=%h/Coding/wispra/third_party/whisper.cpp/build/src:%h/Coding/wispra/third_party/whisper.cpp/build/ggml/src"
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
