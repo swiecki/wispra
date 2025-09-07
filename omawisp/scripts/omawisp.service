@@ -1,0 +1,10 @@
+[Unit]
+Description=OmaWisp Push-to-Talk Daemon
+
+[Service]
+ExecStart=%h/.local/bin/omawispd --debug
+Restart=on-failure
+Environment=PIPEWIRE_LATENCY=256/48000
+
+[Install]
+WantedBy=default.target
