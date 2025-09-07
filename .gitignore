@@ -1,0 +1,17 @@
+# Build artifacts
+zig-cache/
+zig-out/
+
+# Runtime logs
+*.log
+
+# Local configuration
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Cache directories
+models/
+cache/
