@@ -18,3 +18,21 @@ Thumbs.db
 # Cache directories
 models/
 cache/
+
+# Zig build cache (hidden)
+.zig-cache/
+
+# Whisper.cpp build outputs (CMake)
+third_party/whisper.cpp/build/
+third_party/whisper.cpp/bin/
+third_party/whisper.cpp/**/CMakeFiles/
+third_party/whisper.cpp/**/CMakeCache.txt
+third_party/whisper.cpp/**/cmake_install.cmake
+third_party/whisper.cpp/**/Makefile
+
+# Compiled objects and libraries
+**/*.o
+**/*.a
+**/*.so
+**/*.dylib
+**/*.dll

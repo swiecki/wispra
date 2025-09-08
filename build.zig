@@ -20,15 +20,15 @@ pub fn build(b: *std.Build) void {
     wisprad.linkSystemLibrary("dl");
     wisprad.linkSystemLibrary("m"); // math library
 
-    // Whisper.cpp integration
-    const whisper_root = "/home/swiecki/Coding/wispra/third_party/whisper.cpp";
-const whisper_build = "/home/swiecki/Coding/wispra/third_party/whisper.cpp/build";
+    // Whisper.cpp integration (repo-relative paths)
+    const whisper_root = "third_party/whisper.cpp";
+    const whisper_build = "third_party/whisper.cpp/build";
     
     wisprad.addIncludePath(.{ .cwd_relative = whisper_root });
     wisprad.addIncludePath(.{ .cwd_relative = whisper_root ++ "/include" });
     wisprad.addIncludePath(.{ .cwd_relative = whisper_root ++ "/ggml/include" });
     
-    // Link to built libraries
+    // Link to built libraries (produced by CMake in third_party/whisper.cpp/build)
     wisprad.addLibraryPath(.{ .cwd_relative = whisper_build ++ "/src" });
     wisprad.addLibraryPath(.{ .cwd_relative = whisper_build ++ "/ggml/src" });
     wisprad.linkSystemLibrary("whisper");
