@@ -2,6 +2,9 @@
 zig-cache/
 zig-out/
 
+# Third-party dependencies
+third_party/
+
 # Runtime logs
 *.log
 
