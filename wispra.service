@@ -1,5 +1,7 @@
 [Unit]
 Description=Wispra Push-to-Talk Daemon (Zig)
+Wants=graphical-session.target
+After=graphical-session.target
 
 [Service]
 ExecStart=%h/.local/bin/wisprad --debug
